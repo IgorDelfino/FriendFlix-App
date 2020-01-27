@@ -25,6 +25,11 @@ export class AppComponent {
       title: 'Perfil',
       url: '/perfil',
       icon: 'star'
+    },
+    {
+      title: 'Post',
+      url: '/post',
+      icon: 'brush'
     }
   ];
 
