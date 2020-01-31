@@ -7,9 +7,14 @@
 <ion-content>
     <ion-card>
       <ion-card-header>
-          <ion-card-title>{{ dadosPost.nome_user }}</ion-card-title>
-          <ion-card-subtitle>{{ dadosPost.title }}<ion-card-subtitle>
-          <ion-icon size="large" name="thumbs-up" (click)="likeOrUnlike(post.like_state)" color="{post.like_state ? 'primary' : 'light'}"></ion-icon>
+          <ion-card-title>{{ dadosPost.title }}</ion-card-title>
+          <ion-card-subtitle>{{ dadosPost.nome_user }}</ion-card-subtitle>
+          <ion-item class = "conteudo">{{ dadosPost.texto }}</ion-item>
+
+
+          <ion-icon size="large" name="thumbs-up" (click)="likeOrUnlike(dadosPost,1)" color="{{dadosPost.like ? 'primary' : 'light'}}"></ion-icon>
+          <ion-label>{{ dadosPost.num_likes }}</ion-label>
+          <ion-icon size="large" name="thumbs-down" (click)="likeOrUnlike(dadosPost,-1)" color="{{dadosPost.dislike ?  'primary' : 'light'}}"></ion-icon>
       </ion-card-header>
     </ion-card>
 </ion-content>
